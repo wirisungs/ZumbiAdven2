@@ -21,7 +21,6 @@ public class Move : MonoBehaviour
 
 
 
-
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -31,7 +30,7 @@ public class Move : MonoBehaviour
     {
         if (!dialogManager.isTyping)
         {
-            movX = SimpleInput.GetAxis("Horizontal");
+            movX = SimpleInput.GetAxisRaw("Horizontal");
 
             rb.velocity = new Vector2(movX * moveSpeed, rb.velocity.y);
 
