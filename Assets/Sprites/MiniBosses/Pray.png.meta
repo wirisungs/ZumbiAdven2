@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 252c084a2e108e3458da23544c3a4a45
+guid: dd6c7ad74d6e54a1e8ea8e246a3f1174
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -81,19 +81,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -136,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: _Death_0
+      name: Pray_0
       rect:
         serializedVersion: 2
-        x: 36
-        y: 0
-        width: 30
-        height: 39
+        x: 56
+        y: 128
+        width: 20
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,19 +137,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c24473d40681945138d46ab2843fd018
-      internalID: -161039189
+      spriteID: af73214a5e07a4e8cb0447095f0de234
+      internalID: -967847394
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Death_1
+      name: Pray_1
       rect:
         serializedVersion: 2
-        x: 151
-        y: 2
-        width: 29
+        x: 182
+        y: 128
+        width: 20
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e304af5621e3544adaeec61a4e34f91a
+      internalID: -210950639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_2
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 128
+        width: 24
         height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbd09e9064a5440598c5f849677bbf4c
-      internalID: -175176182
+      spriteID: 80d9e6fff9cc247928739bb8990a73d1
+      internalID: 492067820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Death_2
+      name: Pray_3
       rect:
         serializedVersion: 2
-        x: 265
-        y: 6
-        width: 32
-        height: 25
+        x: 438
+        y: 128
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a65ad4c3ebe946f399ecf6a982682ab
-      internalID: -785390080
+      spriteID: 766b34e825ce242348604d385558a913
+      internalID: -731078328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Death_3
+      name: Pray_4
       rect:
         serializedVersion: 2
-        x: 379
-        y: 7
-        width: 35
-        height: 23
+        x: 54
+        y: 64
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ee5fd2775fdb94843aa3b6355a1c84cd
-      internalID: -1128844559
+      spriteID: 465b437ebb57c4c4db1f07d14d5abb3e
+      internalID: -1371128686
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Death_4
+      name: Pray_5
       rect:
         serializedVersion: 2
-        x: 493
-        y: 1
-        width: 38
-        height: 23
+        x: 182
+        y: 64
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,20 +242,62 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b323cab2788cd4d79b2045600f67bf6e
-      internalID: 1810691293
+      spriteID: 3cca70cd9af95465ebb662381e80d7a3
+      internalID: -653337143
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Death_5
+      name: Pray_6
       rect:
         serializedVersion: 2
-        x: 613
+        x: 310
+        y: 64
+        width: 25
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 562718e2ee2f046f1b2d5e11242e80da
+      internalID: -2087556152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_7
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 64
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64bad2418a8024e27baec07c7147f78c
+      internalID: -1487708910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pray_8
+      rect:
+        serializedVersion: 2
+        x: 54
         y: 0
-        width: 37
-        height: 21
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,20 +305,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 55814b8369d4542d59c2b4c84025cd96
-      internalID: -997667278
+      spriteID: 577b43c58f5fe4d138d20b53096c282b
+      internalID: 919340014
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Death_6
+      name: Pray_9
       rect:
         serializedVersion: 2
-        x: 733
+        x: 182
         y: 0
-        width: 37
-        height: 22
+        width: 24
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -276,20 +326,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc0593210cb6240e8a5e749b50bccdba
-      internalID: 276712860
+      spriteID: baabc9b75b81e481e99b7b4b80c7ff93
+      internalID: -1023037996
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Death_7
+      name: Pray_10
       rect:
         serializedVersion: 2
-        x: 853
+        x: 310
         y: 0
-        width: 39
-        height: 17
+        width: 20
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -297,20 +347,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed0b6651bc6804dc8aa0042c6ac53357
-      internalID: -843526357
+      spriteID: 2c937bbad0e394d09830ae342a7d2696
+      internalID: 1368335064
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: _Death_8
+      name: Pray_11
       rect:
         serializedVersion: 2
-        x: 973
+        x: 440
         y: 0
-        width: 41
-        height: 13
+        width: 20
+        height: 44
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -318,29 +368,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 642faa4c942314e35beeeab9fb51fc2a
-      internalID: -105414423
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: _Death_9
-      rect:
-        serializedVersion: 2
-        x: 1093
-        y: 0
-        width: 41
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4a4205924d5c74d788fd84de9bd628bc
-      internalID: 1685229521
+      spriteID: 44be5bed4ed564e47b88d580acc86609
+      internalID: 368730865
       vertices: []
       indices: 
       edges: []
@@ -356,16 +385,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      _Death_0: -161039189
-      _Death_1: -175176182
-      _Death_2: -785390080
-      _Death_3: -1128844559
-      _Death_4: 1810691293
-      _Death_5: -997667278
-      _Death_6: 276712860
-      _Death_7: -843526357
-      _Death_8: -105414423
-      _Death_9: 1685229521
+      Pray_0: -967847394
+      Pray_1: -210950639
+      Pray_10: 1368335064
+      Pray_11: 368730865
+      Pray_2: 492067820
+      Pray_3: -731078328
+      Pray_4: -1371128686
+      Pray_5: -653337143
+      Pray_6: -2087556152
+      Pray_7: -1487708910
+      Pray_8: 919340014
+      Pray_9: -1023037996
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
