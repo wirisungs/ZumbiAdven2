@@ -40,7 +40,7 @@ public class PlayerLife : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.E))
-            TakeDamage(1);
+            TakeDamage(0.1f);
     }
 }
 

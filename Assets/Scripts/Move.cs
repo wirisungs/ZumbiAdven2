@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class Move : MonoBehaviour
 {
-    public DialogManager dialogManager;
     public Animator animator;
 
     private Rigidbody2D rb;
@@ -28,18 +27,15 @@ public class Move : MonoBehaviour
     }
     private void Update()
     {
-        if (!dialogManager.isTyping)
+        movX = SimpleInput.GetAxisRaw("Horizontal");
+
+        rb.velocity = new Vector2(movX * moveSpeed, rb.velocity.y);
+
+        animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
+
+        if (rb.velocity.y < 0)
         {
-            movX = SimpleInput.GetAxisRaw("Horizontal");
-
-            rb.velocity = new Vector2(movX * moveSpeed, rb.velocity.y);
-
-            animator.SetFloat("Speed", Mathf.Abs(rb.velocity.x));
-
-            if (rb.velocity.y < 0)
-            {
-                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiple - 1) * Time.deltaTime;
-            }
+            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiple - 1) * Time.deltaTime;
         }
     }
     private void FixedUpdate()
@@ -52,16 +48,13 @@ public class Move : MonoBehaviour
 
     public void Jump()
     {
-        if (!dialogManager.isTyping)
-        {
-            if (jumpRemaining > 0)
+        if (jumpRemaining > 0)
             {
                 animator.SetBool("isJumping", true);
                 rb.velocity = new Vector2(rb.velocity.x, 0f);
                 rb.AddForce(transform.up * jumpForce);
                 jumpRemaining--;
             }
-        }
     }
     private void Flip()
     {

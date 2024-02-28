@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,6 +11,10 @@ public class DialogManager : MonoBehaviour
     public Text dialogueText;
     public string[] dialogue;
     public bool isTyping;
+
+    [Header("UI Button")]
+    [SerializeField] private GameObject MoveBtn;
+    [SerializeField] private GameObject ActionBtn;
 
     private float wordSpeed = 0.01f;
     private int index;
@@ -32,6 +36,11 @@ public class DialogManager : MonoBehaviour
         else
         {
             dialoguePanel.SetActive(true);
+
+            // Ẩn các button khi dialogue xuất hiện
+            MoveBtn.SetActive(false);
+            ActionBtn.SetActive(false);
+
             StartCoroutine(Typing());
             isTyping = true;
         }
@@ -46,6 +55,10 @@ public class DialogManager : MonoBehaviour
         dialogueText.text = "";
         index = 0;
         dialoguePanel.SetActive(false);
+
+        // Hiện các button khi dialogue kết thúc
+        MoveBtn.SetActive(true);
+        ActionBtn.SetActive(true);
     }
 
     public void NextLine()
