@@ -5,31 +5,42 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
-    private Animator animator;
-    private Rigidbody2D rigidbody2D;
-    void Start()
+    [SerializeField] private float startingHealth;
+    public float currentHealth { get; private set; }
+    private Animator anim;
+
+    private bool dead;
+
+    private void Start()
     {
-        rigidbody2D = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        currentHealth = startingHealth;
+        anim = GetComponent<Animator>();
+
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+
+    public void TakeDamage(float _damage)
     {
-        if (collision.gameObject.CompareTag("Trap"))
+        currentHealth = Mathf.Clamp(currentHealth - _damage, 0, startingHealth);
+
+        if (currentHealth > 0)
         {
-            Die();
+            anim.SetTrigger("HurtTrigger");
+        }
+        else
+        {
+            if (!dead)
+            {
+                anim.SetTrigger("DeathTrigger");
+                GetComponent<Move>().enabled = false;
+                dead = true;
+            }
+           
         }
     }
-
-    private void Die()
+    private void Update()
     {
-        rigidbody2D.bodyType = RigidbodyType2D.Static;
-        animator.SetTrigger("DeathTrigger");
+        if (Input.GetKeyDown(KeyCode.E))
+            TakeDamage(1);
     }
-
-    private void RestartLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-    
 }
 
