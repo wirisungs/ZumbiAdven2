@@ -17,9 +17,9 @@ TagManager:
   - UI
   - 
   - Player
-  - NPC
-  - Boss
   - Enemy
+  - Boss
+  - NPC
   - 
   - Background
   - 
