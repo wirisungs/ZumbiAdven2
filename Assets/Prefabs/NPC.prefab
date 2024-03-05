@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3157673234108771733}
   - component: {fileID: 8009899039999110233}
   - component: {fileID: 3202291477374251135}
+  - component: {fileID: 6728196582435490101}
   - component: {fileID: 8080036963554162167}
   m_Layer: 8
   m_Name: NPC
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 41658290082309471}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.95, y: -2.853, z: 0.01}
+  m_LocalPosition: {x: 7.63, y: -2.853, z: 0.01}
   m_LocalScale: {x: 2.8306, y: 3.0245361, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -77,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1812522645, guid: ba90f430fd1124a038a4200603e05c37, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.003576517, y: 0}
+  m_Offset: {x: -0.0040804595, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3504739, y: 1}
+  m_Size: {x: 0.63070405, y: 1}
   m_EdgeRadius: 0
 --- !u!70 &3157673234108771733
 CapsuleCollider2D:
@@ -166,8 +167,8 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.003576517, y: 0}
-  m_Size: {x: 1.3361688, y: 1}
+  m_Offset: {x: 0.0010235928, y: 0}
+  m_Size: {x: 0.8103774, y: 1.2504923}
   m_Direction: 0
 --- !u!114 &8009899039999110233
 MonoBehaviour:
@@ -201,12 +202,104 @@ MonoBehaviour:
   InteractionManager: {fileID: 8009899039999110233}
   dialoguePanel: {fileID: 0}
   continueBtn: {fileID: 0}
+  charIcon: {fileID: 0}
+  charName: {fileID: 0}
   dialogueText: {fileID: 0}
-  dialogue:
-  - "\xCA th\u1EB1ng kia, 10h s\xE1ng r\u1ED3i m\xE0y d\u1EADy ch\u01B0a !!!???"
   isTyping: 0
+  wordSpeed: 0.01
+  animator: {fileID: 8080036963554162167}
   MoveBtn: {fileID: 0}
   ActionBtn: {fileID: 0}
+--- !u!114 &6728196582435490101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41658290082309471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9676f8164b8b1ca40a1eb6ec7f680c26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialog:
+    dialogueLines:
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "Nh\xF3c d\u1EADy r\u1ED3i \u0111\u1EA5y \xE0? N\u1EBFu nh\xF3c g\u1EB7p
+        ta l\xFAc n\xE0y th\xEC c\xF3 v\u1EBB nh\xF3c \u0111ang mu\u1ED1n bi\u1EBFt
+        v\u1EC1 b\u1ED1 m\u1EB9 m\xECnh nh\u1EC9?"
+    - charater:
+        name: Artorigus
+        icon: {fileID: -1529441095, guid: 6b5ccebfec7395742ae0286465924f0e, type: 3}
+      line: "V\xE2ng ! Ch\u1EAFc ch\u1EAFn r\u1ED3i \u1EA1."
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "\u0110\u01B0\u1EE3c th\xF4i. B\u1ED1 m\u1EB9 nh\xF3c, ta v\xE0 m\u1ED9t
+        linh m\u1EE5c n\u1EEFa t\u1EEBng l\xE0 m\u1ED9t \u0111\u1ED9i m\u1EA1o hi\u1EC3m
+        gi\u1EA3 \u0111\u1EA3m nhi\u1EC7m m\u1ED9t \u1EE7y th\xE1c. Tho\u1EA1t nh\xECn
+        n\xF3 ch\u1EC9 l\xE0 m\u1ED9t \u1EE7y th\xE1c b\xECnh th\u01B0\u1EDDng, \u0111\u01A1n
+        gi\u1EA3n, \u0111\xF3 l\xE0 m\u1ED9t \u1EE7y th\xE1c di\u1EC7t undead. Nh\u01B0ng\u2026
+        ch\xFAng ta \u0111\xE3 \u0111\xE1nh gi\xE1 th\u1EA5p \u1EE7y th\xE1c n\xE0y\u2026"
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "Th\u1EA3m h\u1ECDa b\u1EAFt \u0111\u1EA7u t\u1EEB m\u1ED9t hang \u0111\u1ED9ng
+        n\u1EB1m \u1EDF ch\xE2n n\xFAi g\u1EA7n th\xE0nh Hifluto, undead \u0111\u1ED9t
+        bi\u1EBFn nhi\u1EC1n h\u01A1n b\xECnh th\u01B0\u1EDDng l\xE0m c\u1EA3n tr\u1EDF
+        \u0111\u1EBFn vi\u1EC7c di chuy\u1EC3n, v\u1EADn chuy\u1EC3n c\u1EE7a ng\u01B0\u1EDDi
+        d\xE2n."
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "Nh\u01B0ng khi b\u1ECDn ta \u0111\u1EBFn h\u1ED7 tr\u1EE3 theo \u1EE7y
+        th\xE1c, th\xEC m\u1ECDi th\u1EE9 \u0111\xE3 r\u1EA5t t\u1EC7. C\xF3 v\u1EBB
+        b\u1ECDn ta \u0111\xE3 ch\u1EADm m\u1ED9t b\u01B0\u1EDBc, th\xE0nh Hifluto
+        \u0111\xE3 th\u1EA5t th\u1EE7. D\u1EF1a tr\xEAn th\xF4ng tin c\u1EE7a nh\u1EEFng
+        n\u1EA1n nh\xE2n may m\u1EAFn s\u1ED1ng s\xF3t, b\u1ECDn ta bi\u1EBFt \u0111\u01B0\u1EE3c
+        chuy\u1EC7n n\xE0y kh\xF4ng h\u1EC1 d\u1EC5."
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "B\u1ECDn undead \u0111\u1ED9t bi\u1EBFn m\u1ED9t c\xE1ch b\u1EA5t th\u01B0\u1EDDng.
+        B\u1ECDn ch\xFAng c\xF3 kh\u1EA3 n\u0103ng di chuy\u1EC3n kh\xE9o l\xE9o,
+        c\xF3 t\xEDnh b\u1EA7y \u0111\xE0n, v\xE0 c\u1EA3 tr\xED tu\u1EC7, \u0111\xF3
+        l\xE0 th\u1EE9 tr\u01B0\u1EDBc \u0111\xE2y b\u1ECDn ch\xFAng kh\xF4ng c\xF3.
+        V\xE0 d\u1EF1a v\xE0o c\xE1c manh m\u1ED1i c\xF3 \u0111\u01B0\u1EE3c, b\u1ECDn
+        ta \u0111\xE3 truy ra k\u1EBB \u0111\u1EE9ng sau m\u1ECDi chuy\u1EC7n."
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "B\u1ECDn ta g\u1ECDi \u0111\xF3 l\xE0 Cxap, k\u1EBB c\xF3 kh\u1EA3 n\u0103ng
+        thay \u0111\u1ED5i \u0111\u1ECBnh lu\u1EADt t\u1EF1 nhi\xEAn. V\xE0 b\u1ED1
+        m\u1EB9 nh\xF3c l\xE0 hai anh h\xF9ng v\u0129 \u0111\u1EA1i."
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "B\u1ED1 nh\xF3c l\xE0 m\u1ED9t th\xE1nh hi\u1EC7p s\u0129, m\u1EB9 nh\xF3c
+        l\xE0 m\u1ED9t ph\xE1p s\u01B0. D\u1EF1a tr\xEAn s\u1EF1 h\u1ED7 tr\u1EE3
+        c\u1EE7a c\u1EA3 \u0111\u1ED9i, m\u1EB9 nh\xF3c \u0111\xE3 thi tri\u1EC3n
+        m\u1ED9t thu\u1EADt th\u1EE9c \u0111\u1EB7c bi\u1EC7t c\u1EE7a t\u1ED9c nh\u1EB1m
+        phong \u1EA5n Cxap t\u1EA1i \u0111\u1EC9nh n\xFAi \u0111\xF3. Nh\u01B0ng
+        \u0111\u1ED5i l\u1EA1i ng\u01B0\u1EDDi s\u1EED d\u1EE5ng thu\u1EADt th\u1EE9c
+        ph\u1EA3i hi\u1EBFn t\u1EBF ph\u1EA7n linh h\u1ED3n c\u1EE7a ch\xEDnh h\u1ECD. "
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "M\u1EB9 nh\xF3c \u0111\xE3 hi sinh, v\xE0 b\u1ED1 nh\xF3c c\u0169ng
+        \u0111\xE3 hi sinh v\xEC v\u1EBFt th\u01B0\u01A1ng n\u1EB7ng khi c\xE2u gi\u1EDD
+        cho m\u1EB9 nh\xF3c thi tri\u1EC3n thu\u1EADt th\u1EE9c. V\xE0 cu\u1ED1i
+        c\xF9ng l\xE0 \u0111\u1EC3 l\u1EA1i nh\xF3c cho ta nu\xF4i d\u01B0\u1EE1ng."
+    - charater:
+        name: Mortis
+        icon: {fileID: 439651584, guid: 2b4e3959fc18b3a4b832ab9bddfb7c37, type: 3}
+      line: "\u0110\u1EBFn gi\u1EDD nh\xF3c \u0111\xE3 tr\u01B0\u1EDFng th\xE0nh,
+        v\xE0 \u0111\u1EE7 m\u1EA1nh m\u1EBB v\u1EDBi nh\u1EEFng g\xEC ta \u0111\xE3
+        d\u1EA1y su\u1ED1t nhi\u1EC1u n\u0103m qua. B\xE2y gi\u1EDD phong \u1EA5n
+        \u1EA5y c\u0169ng \u0111\xE3 y\u1EBFu \u0111i, Cxap \u0111ang tr\u1EDF l\u1EA1i,
+        nh\xF3c h\xE3y \u0111\u01B0a ra l\u1EF1a ch\u1ECDn cho m\xECnh \u0111i."
 --- !u!95 &8080036963554162167
 Animator:
   serializedVersion: 5
