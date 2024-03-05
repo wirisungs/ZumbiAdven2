@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2b4e3959fc18b3a4b832ab9bddfb7c37
+guid: 1e267465533563542a4972ca94ac1c3d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,22 +136,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grandfather_0
+      name: DialogSprite2 1_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
+        y: 8
+        width: 900
+        height: 186
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcaeda49ae14b064ca9a6a2f5294b44d
-      internalID: 439651584
+      spriteID: 7f48ae501db52ab4999b9cc2bd083d10
+      internalID: -1410621868
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grandfather_0: 439651584
+      DialogSprite2 1_0: -1410621868
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

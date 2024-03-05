@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2b4e3959fc18b3a4b832ab9bddfb7c37
+guid: 6b5ccebfec7395742ae0286465924f0e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grandfather_0
+      name: Artorigus_0
       rect:
         serializedVersion: 2
         x: 0
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcaeda49ae14b064ca9a6a2f5294b44d
-      internalID: 439651584
+      spriteID: 6ef43d86b8d383e4c98216470eb9a16c
+      internalID: -1529441095
       vertices: []
       indices: 
       edges: []
@@ -167,7 +167,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grandfather_0: 439651584
+      Artorigus_0: -1529441095
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -5,84 +5,83 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+    public static DialogManager Instance;
+
     public InteractionManager InteractionManager;
     public GameObject dialoguePanel;
     public GameObject continueBtn;
+
+    public Image charIcon;
+    public Text charName;
     public Text dialogueText;
-    public string[] dialogue;
+
+    private Queue<DialogueLine> lines = new Queue<DialogueLine>();
+
     public bool isTyping;
+    public float wordSpeed = 0.01f;
+
+    public Animator animator;
 
     [Header("UI Button")]
     [SerializeField] private GameObject MoveBtn;
     [SerializeField] private GameObject ActionBtn;
 
-    private float wordSpeed = 0.01f;
-    private int index;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        InteractionManager.InteractButton();
-        if(dialogueText.text == dialogue[index])
-            continueBtn.SetActive(true);
+        if(Instance == null)
+            Instance = this;
     }
-
-    public void OpenDialoguePanel()
+    public void OpenDialoguePanel(Dialog dialogue)
     {
-        if (dialoguePanel.activeInHierarchy)
+        isTyping = true;
+        dialoguePanel.SetActive(true);
+
+        MoveBtn.SetActive(false);
+        ActionBtn.SetActive(false);
+
+
+        lines.Clear();
+        foreach (DialogueLine dialogueLine in dialogue.dialogueLines)
         {
-            ZeroText();
+            lines.Enqueue(dialogueLine);
         }
-        else
-        {
-            dialoguePanel.SetActive(true);
-
-            // Ẩn các button khi dialogue xuất hiện
-            MoveBtn.SetActive(false);
-            ActionBtn.SetActive(false);
-
-            StartCoroutine(Typing());
-            isTyping = true;
-        }
-    }
-    public void onButtonClick()
-    {
-        OpenDialoguePanel();
-    }
-
-    public void ZeroText()
-    {
-        dialogueText.text = "";
-        index = 0;
-        dialoguePanel.SetActive(false);
-
-        // Hiện các button khi dialogue kết thúc
-        MoveBtn.SetActive(true);
-        ActionBtn.SetActive(true);
+        NextLine();
     }
 
     public void NextLine()
     {
-        continueBtn.SetActive(false);
+        if (lines.Count == 0)
+        {
+            EndDialogue();
+            return;
+        }
 
-        if(index < dialogue.Length - 1)
-        {
-            index++;
-            dialogueText.text = "";
-            StartCoroutine(Typing());
-        }
-        else
-        {
-            ZeroText();
-            isTyping = false;
-        }
+        DialogueLine currentLine = lines.Dequeue();
+
+        charIcon.sprite = currentLine.charater.icon;
+        charName.text = currentLine.charater.name;
+
+        StopAllCoroutines();
+        StartCoroutine(Typing(currentLine));
     }
-    IEnumerator Typing()
+    IEnumerator Typing(DialogueLine dialogue)
     {
-        foreach(char letter in dialogue[index].ToCharArray())
+        dialogueText.text = "";
+        foreach (char letter in dialogue.line.ToCharArray())
         {
             dialogueText.text += letter;
             yield return new WaitForSeconds(wordSpeed);
         }
+    }
+
+    void EndDialogue()
+    {
+        dialoguePanel.SetActive(false);
+
+        MoveBtn.SetActive(true);
+        ActionBtn.SetActive(true);
+
+        isTyping = false;
     }
 }
