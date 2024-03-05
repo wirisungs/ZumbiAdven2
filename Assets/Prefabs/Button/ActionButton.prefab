@@ -120,7 +120,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6728196582435490101, guid: ffe65d61df16295438c16a540c00b77a, type: 3}
         m_TargetAssemblyTypeName: DialogTrigger, Assembly-CSharp
         m_MethodName: TriggerDialogue
         m_Mode: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 732939774051731371, guid: 53164e6c20ce19a43abf17ab9aa07e3c, type: 3}
         m_TargetAssemblyTypeName: AttackManager, Assembly-CSharp
         m_MethodName: Attack
         m_Mode: 1
@@ -422,7 +422,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 8226631872123126289, guid: 53164e6c20ce19a43abf17ab9aa07e3c, type: 3}
         m_TargetAssemblyTypeName: Move, Assembly-CSharp
         m_MethodName: Jump
         m_Mode: 1
