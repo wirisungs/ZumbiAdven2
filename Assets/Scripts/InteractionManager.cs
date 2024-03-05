@@ -9,12 +9,12 @@ public class InteractionManager : MonoBehaviour
     public GameObject InteractBtn;
     public float RaycastDistance = 2f;
 
-    public void InteractButton()
+    private void Update()
     {
         RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector2.left, RaycastDistance, playerLayer);
         RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector2.right, RaycastDistance, playerLayer);
 
-        if(hitLeft.collider != null || hitRight.collider != null)
+        if (hitLeft.collider != null || hitRight.collider != null)
             InteractBtn.SetActive(true);
         else
             InteractBtn.SetActive(false);
