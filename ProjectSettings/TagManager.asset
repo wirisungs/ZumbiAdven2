@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Surface
+  - Trap
+  - Coin
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,9 +17,9 @@ TagManager:
   - UI
   - 
   - Player
+  - Enemy
+  - Boss
   - NPC
-  - 
-  - 
   - 
   - Background
   - 
@@ -39,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background layer
+    uniqueID: 1483201813
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
