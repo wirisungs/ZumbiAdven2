@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2b4e3959fc18b3a4b832ab9bddfb7c37
+guid: 9b6a1190935b05d4e8441c7e2cce5c07
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -136,22 +136,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grandfather_0
+      name: DialogSprite 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 33
+        y: 4
+        width: 30
+        height: 8
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcaeda49ae14b064ca9a6a2f5294b44d
-      internalID: 439651584
+      spriteID: 948f03f43dc624b4998ce042c23ca992
+      internalID: -1708655257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DialogSprite 1_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 4
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6906e7172e412c40ba05c6199d0b4fa
+      internalID: 165324282
       vertices: []
       indices: 
       edges: []
@@ -167,7 +188,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Grandfather_0: 439651584
+      DialogSprite 1_0: -1708655257
+      DialogSprite 1_1: 165324282
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
