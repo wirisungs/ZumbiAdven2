@@ -67,5 +67,10 @@ public class PlayerLife : MonoBehaviour
         }
         Physics2D.IgnoreLayerCollision(7, 8, false);
     }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }
 
