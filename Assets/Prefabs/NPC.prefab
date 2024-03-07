@@ -200,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InteractionManager: {fileID: 8009899039999110233}
-  dialoguePanel: {fileID: 3766381608082190194, guid: c0a39895e7d7174448e48da9a6dd4888, type: 3}
+  dialoguePanel: {fileID: 0}
   continueBtn: {fileID: 0}
   charIcon: {fileID: 0}
   charName: {fileID: 0}
@@ -208,8 +208,9 @@ MonoBehaviour:
   isTyping: 0
   wordSpeed: 0.01
   animator: {fileID: 8080036963554162167}
-  MoveBtn: {fileID: 2389143204397438638, guid: a891bc6cef6f8914d84d515a9c191c6f, type: 3}
-  ActionBtn: {fileID: 7320607666753001261, guid: c2166239b0133ba4b99b72e7762c4bce, type: 3}
+  MoveBtn: {fileID: 0}
+  ActionBtn: {fileID: 0}
+  UpgradeBtn: {fileID: 0}
 --- !u!114 &6728196582435490101
 MonoBehaviour:
   m_ObjectHideFlags: 0

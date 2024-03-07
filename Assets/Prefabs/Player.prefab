@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 3951424798553597957}
   - component: {fileID: 1588119494176613470}
   - component: {fileID: 263691761628030706}
+  - component: {fileID: 1424840894222567014}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -239,4 +240,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325eacc09771045c597bcdb6a96a87f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coins: 0
   coinText: {fileID: 0}
+--- !u!114 &1424840894222567014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749597547024676900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb25692419e6ed4295d606fe5a17bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCoins: {fileID: 0}
+  AtkLevel: {fileID: 0}
+  AtkDamage: {fileID: 0}
+  AtkPrice: {fileID: 0}
+  DefLevel: {fileID: 0}
+  Def: {fileID: 0}
+  DefPrice: {fileID: 0}
+  maxLevel: 5
+  attackManager: {fileID: 732939774051731371}
+  playerLife: {fileID: 1588119494176613470}
+  CoinCollector: {fileID: 263691761628030706}
+  UpgradePanel: {fileID: 0}
+  HealthBar: {fileID: 0}
+  CoinCollectorGameObject: {fileID: 0}
+  ActionButton: {fileID: 0}
+  MoveButton: {fileID: 0}
+  UpgradeButton: {fileID: 0}

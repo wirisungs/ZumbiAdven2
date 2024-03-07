@@ -7,7 +7,18 @@ public class PlayerLife : MonoBehaviour
 {
     [Header ("Health")]
     [SerializeField] private float startingHealth;
-    public float currentHealth { get; private set; }
+
+    public float getStartingHealth()
+    {
+        return startingHealth;
+    }
+
+    public void setStartingHealth(float startingHealth)
+    {
+        this.startingHealth = startingHealth;
+    }
+
+    public float currentHealth { get; set; }
     private Animator anim;
     private bool dead;
 
