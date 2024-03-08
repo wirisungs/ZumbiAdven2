@@ -43,7 +43,8 @@ public class PlayerLife : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("DeathTrigger");
-                GetComponent<Move>().enabled = false;
+                foreach(Behaviour component in component)
+                    component.enabled = false;
                 dead = true;
             }
            

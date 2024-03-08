@@ -176,15 +176,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd66193fadc031a42845a6f7fe778c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cooldownAttack: 1.5
   animator: {fileID: 3951424798553597957}
-  attackSound: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 05c8a9db0448a4a688df89aa782486ae, type: 3}
   atkDamage: 2
   attackRange: 1
   AttackPoint: {fileID: 2499602222098577153}
   enemyLayers:
     serializedVersion: 2
     m_Bits: 256
+  cooldownAttack: 1.5
 --- !u!114 &8226631872123126289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +234,9 @@ MonoBehaviour:
   startingHealth: 4
   iFramesDuration: 2
   numberOfFlashes: 3
-  component: []
+  component:
+  - {fileID: 1588119494176613470}
+  - {fileID: 8226631872123126289}
 --- !u!114 &263691761628030706
 MonoBehaviour:
   m_ObjectHideFlags: 0
