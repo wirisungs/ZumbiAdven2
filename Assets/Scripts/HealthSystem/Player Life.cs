@@ -7,7 +7,18 @@ public class PlayerLife : MonoBehaviour
 {
     [Header ("Health")]
     [SerializeField] private float startingHealth;
-    public float currentHealth { get; private set; }
+
+    public float getStartingHealth()
+    {
+        return startingHealth;
+    }
+
+    public void setStartingHealth(float startingHealth)
+    {
+        this.startingHealth = startingHealth;
+    }
+
+    public float currentHealth { get; set; }
     private Animator anim;
     private bool dead;
 
@@ -66,6 +77,11 @@ public class PlayerLife : MonoBehaviour
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes));
         }
         Physics2D.IgnoreLayerCollision(7, 8, false);
+    }
+
+    private void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
 

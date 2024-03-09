@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,7 +14,7 @@ public class DialogueCharater
 public class DialogueLine
 {
     public DialogueCharater charater;
-    [TextArea(3, 10)]
+    [TextArea(3, 10)] // tối thiểu 3 dòng, tối đa 10 dòng
     public string line;
 }
 
