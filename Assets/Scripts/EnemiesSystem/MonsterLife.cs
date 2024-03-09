@@ -19,6 +19,9 @@ public class MonsterLife : MonoBehaviour
     [SerializeField] private Behaviour[] component;
     private bool invulnerable;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip deathSound;
+
 
     private void Awake()
     {

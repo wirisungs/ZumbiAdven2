@@ -48,6 +48,6 @@ public class Projectile : MonoBehaviour
 
     private void Deactivate()
     {
-
+        gameObject.SetActive(false);
     }
 }

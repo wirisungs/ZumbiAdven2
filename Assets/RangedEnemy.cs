@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class RangedEnemy : MonoBehaviour
 {
-
     [Header("Attack Parameters")]
-    [SerializeField] private float attackCD;
+    [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private int damage;
 
     [Header("Ranged Attack")]
     [SerializeField] private Transform firepoint;
-    [SerializeField] private GameObject[] fireball;
-
+    [SerializeField] private GameObject[] fireballs;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -23,8 +21,11 @@ public class RangedEnemy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip fireballSound;
+
+    //References
     private Animator anim;
-    private PlayerLife playerLife;
     private EnemyPatrol enemyPatrol;
 
     private void Awake()
@@ -37,34 +38,32 @@ public class RangedEnemy : MonoBehaviour
     {
         cooldownTimer += Time.deltaTime;
 
-
+        //Attack only when player in sight?
         if (PlayerInSight())
         {
-            if (cooldownTimer >= attackCD)
+            if (cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0;
                 anim.SetTrigger("rangedAttack");
             }
-
         }
 
         if (enemyPatrol != null)
             enemyPatrol.enabled = !PlayerInSight();
-
     }
 
     private void RangedAttack()
     {
+        SFXManager.instance.PlaySound(fireballSound);
         cooldownTimer = 0;
-        fireball[FindFireball()].transform.position = firepoint.position;
-        fireball[FindFireball()].GetComponent<EnemyProjectile>().ActivateProjectile();
+        fireballs[FindFireball()].transform.position = firepoint.position;
+        fireballs[FindFireball()].GetComponent<EnemyProjectile>().ActivateProjectile();
     }
-
     private int FindFireball()
     {
-        for(int i = 0; i < fireball.Length; i++)
+        for (int i = 0; i < fireballs.Length; i++)
         {
-            if (!fireball[i].activeInHierarchy)
+            if (!fireballs[i].activeInHierarchy)
                 return i;
         }
         return 0;
@@ -77,17 +76,13 @@ public class RangedEnemy : MonoBehaviour
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
             0, Vector2.left, 0, playerLayer);
 
-        
-
-
-
         return hit.collider != null;
     }
-
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
             new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
+
 }
