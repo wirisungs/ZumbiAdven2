@@ -14,7 +14,18 @@ public class AttackManager : MonoBehaviour
     [SerializeField] private AudioClip attackSound;
 
     [Header("Attack")]
-    [SerializeField] private int atkDamage = 2;
+    [SerializeField] private float atkDamage = 2f;
+
+    public float getAtkDamage()
+    {
+        return atkDamage;
+    }
+    public void setAtkDamage(float atkDamage)
+    {
+        this.atkDamage = atkDamage;
+    }
+
+
     public float attackRange = 0.5f;
     public Transform AttackPoint;
     public LayerMask enemyLayers;
