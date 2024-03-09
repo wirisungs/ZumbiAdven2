@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba00368d03e2493a9d2e8c5e7a3939a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCD: 2
+  attackCD: 1.5
   range: 2
   colliderDistance: 0.75
   damange: 2
@@ -174,6 +174,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  attackSound: {fileID: 8300000, guid: f23436674d32844f1a4d195abb97fa59, type: 3}
 --- !u!114 &6927143847730609864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,3 +191,4 @@ MonoBehaviour:
   iFramesDuration: 2
   numberOfFlashes: 3
   component: []
+  deathSound: {fileID: 8300000, guid: b49d5658500924e8fba5fc01243ce00d, type: 3}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MushroomEnemy : MonoBehaviour
+public class MeleeEnemy : MonoBehaviour
 {
     [SerializeField] private float attackCD;
     [SerializeField] private float range;
@@ -11,6 +11,9 @@ public class MushroomEnemy : MonoBehaviour
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
+
+    [Header("SFX")]
+    [SerializeField] private AudioClip attackSound;
 
     private PlayerLife playerLife;
     private Animator animator;
@@ -30,10 +33,11 @@ public class MushroomEnemy : MonoBehaviour
 
         if(PlayerInSight())
         {
-            if(cooldownTimer >= attackCD)
+            if(cooldownTimer >= attackCD && playerLife.currentHealth > 0)
             {
                 cooldownTimer = 0;
                 animator.SetTrigger("attack");
+                SFXManager.instance.PlaySound(attackSound);
             }
 
         }

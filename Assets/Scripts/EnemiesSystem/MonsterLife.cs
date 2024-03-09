@@ -19,6 +19,9 @@ public class MonsterLife : MonoBehaviour
     [SerializeField] private Behaviour[] component;
     private bool invulnerable;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip deathSound;
+
 
     private void Awake()
     {
@@ -42,7 +45,12 @@ public class MonsterLife : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("die");
-                GetComponent<Move>().enabled = false;
+                
+                foreach(Behaviour component in component)
+                {
+                    component.enabled = false;
+                }
+
                 dead = true;
             }
 
@@ -65,5 +73,10 @@ public class MonsterLife : MonoBehaviour
             yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes));
         }
         Physics2D.IgnoreLayerCollision(7, 8, false);
+    }
+
+    private void Deactivate()
+    {
+        gameObject.SetActive(false);
     }
 }

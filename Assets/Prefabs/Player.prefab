@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 3951424798553597957}
   - component: {fileID: 1588119494176613470}
   - component: {fileID: 263691761628030706}
-  - component: {fileID: 1424840894222567014}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -37,7 +36,8 @@ Transform:
   m_LocalPosition: {x: -2.8, y: -2.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2499602222098577153}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4533230925174911907
@@ -176,8 +176,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd66193fadc031a42845a6f7fe778c91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkDamage: 2
   animator: {fileID: 3951424798553597957}
+  attackSound: {fileID: 8300000, guid: 24635aaeb07cc48cab1f90ba086f5b93, type: 3}
+  atkDamage: 2
+  attackRange: 1
+  AttackPoint: {fileID: 2499602222098577153}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 256
+  cooldownAttack: 1.5
 --- !u!114 &8226631872123126289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +234,10 @@ MonoBehaviour:
   startingHealth: 4
   iFramesDuration: 2
   numberOfFlashes: 3
-  component: []
+  deathSound: {fileID: 8300000, guid: b49d5658500924e8fba5fc01243ce00d, type: 3}
+  component:
+  - {fileID: 1588119494176613470}
+  - {fileID: 8226631872123126289}
 --- !u!114 &263691761628030706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,34 +250,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325eacc09771045c597bcdb6a96a87f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coins: 0
   coinText: {fileID: 0}
---- !u!114 &1424840894222567014
-MonoBehaviour:
+--- !u!1 &6122250992598891582
+GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749597547024676900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccb25692419e6ed4295d606fe5a17bfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCoins: {fileID: 0}
-  AtkLevel: {fileID: 0}
-  AtkDamage: {fileID: 0}
-  AtkPrice: {fileID: 0}
-  DefLevel: {fileID: 0}
-  Def: {fileID: 0}
-  DefPrice: {fileID: 0}
-  maxLevel: 5
-  attackManager: {fileID: 732939774051731371}
-  playerLife: {fileID: 1588119494176613470}
-  CoinCollector: {fileID: 263691761628030706}
-  UpgradePanel: {fileID: 0}
-  HealthBar: {fileID: 0}
-  CoinCollectorGameObject: {fileID: 0}
-  ActionButton: {fileID: 0}
-  MoveButton: {fileID: 0}
-  UpgradeButton: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2499602222098577153}
+  m_Layer: 0
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2499602222098577153
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6122250992598891582}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2, y: -0.21, z: 0.009546304}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2900928676951168530}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

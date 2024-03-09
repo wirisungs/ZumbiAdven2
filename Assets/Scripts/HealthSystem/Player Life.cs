@@ -27,9 +27,14 @@ public class PlayerLife : MonoBehaviour
     [SerializeField] private int numberOfFlashes;
     private SpriteRenderer spriteRenderer;
 
+    [Header("SFX")]
+    [SerializeField] private AudioClip deathSound;
+
     [Header("Component")]
     [SerializeField] private Behaviour[] component;
     private bool invulnerable;
+
+    
 
 
     private void Awake()
@@ -54,8 +59,15 @@ public class PlayerLife : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("DeathTrigger");
-                GetComponent<Move>().enabled = false;
+
+
+                foreach(Behaviour component in component)
+                    component.enabled = false;
+
+
                 dead = true;
+
+                SFXManager.instance.PlaySound(deathSound);
             }
            
         }

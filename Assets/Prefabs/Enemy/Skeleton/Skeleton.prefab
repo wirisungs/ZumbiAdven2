@@ -253,7 +253,11 @@ MonoBehaviour:
   startingHealth: 6
   iFramesDuration: 1.5
   numberOfFlashes: 3
-  component: []
+  component:
+  - {fileID: 664988411524197038}
+  - {fileID: 51544987464197796}
+  deathSound: {fileID: 8300000, guid: b49d5658500924e8fba5fc01243ce00d, type: 3}
+  hurtSound: {fileID: 0}
 --- !u!114 &664988411524197038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ba00368d03e2493a9d2e8c5e7a3939a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackCD: 2
+  attackCD: 1
   range: 2
   colliderDistance: 0.75
   damange: 2
@@ -274,6 +278,7 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
+  attackSound: {fileID: 8300000, guid: 05c8a9db0448a4a688df89aa782486ae, type: 3}
 --- !u!1 &9178463773291392828
 GameObject:
   m_ObjectHideFlags: 0
