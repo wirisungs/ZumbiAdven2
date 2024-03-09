@@ -241,7 +241,7 @@ MonoBehaviour:
   rightEdge: {fileID: 8921152829938742866}
   enemy: {fileID: 1525573853821502215}
   speed: 2.5
-  idleDuration: 1
+  idleDuration: 7.43
   anim: {fileID: 3980800288149644958}
 --- !u!1 &7295098282327431240
 GameObject:
