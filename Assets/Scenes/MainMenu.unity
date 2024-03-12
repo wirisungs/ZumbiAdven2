@@ -386,6 +386,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3161080388855799034, guid: 2b7ec4d9d0cfc2f4a97be3708368858d, type: 3}
   m_PrefabInstance: {fileID: 4438032391553871225}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1027354770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027354766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0b936736172e4c931d91115c27ca8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1437792300
 GameObject:
   m_ObjectHideFlags: 0
@@ -398,6 +410,7 @@ GameObject:
   - component: {fileID: 1437792302}
   - component: {fileID: 1437792301}
   - component: {fileID: 1437792304}
+  - component: {fileID: 1437792305}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -490,6 +503,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc51a16cd72b74263bfcd8fbe62d047e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1437792305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437792300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 372a6d506a8f8f74ba8ef5767aec020f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1496668486
@@ -644,6 +669,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2133756992 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5303186560749258219, guid: 87e3c659f4af741429fad02839e0641d, type: 3}
+  m_PrefabInstance: {fileID: 6389139632566572719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2133756993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133756992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe960521c344c14c9c5f86e72a47f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCam: {fileID: 1437792302}
 --- !u!1001 &3244882863184940938
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -945,7 +988,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1488745769211724390, guid: 2b7ec4d9d0cfc2f4a97be3708368858d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1027354770}
   m_SourcePrefab: {fileID: 100100000, guid: 2b7ec4d9d0cfc2f4a97be3708368858d, type: 3}
 --- !u!1001 &6389139632566572719
 PrefabInstance:
@@ -1042,11 +1088,22 @@ PrefabInstance:
     - target: {fileID: 8763918798724222916, guid: 87e3c659f4af741429fad02839e0641d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1437792304}
+      objectReference: {fileID: 2133756993}
+    - target: {fileID: 8763918798724222916, guid: 87e3c659f4af741429fad02839e0641d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClickStart
+      objectReference: {fileID: 0}
+    - target: {fileID: 8763918798724222916, guid: 87e3c659f4af741429fad02839e0641d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5303186560749258219, guid: 87e3c659f4af741429fad02839e0641d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2133756993}
   m_SourcePrefab: {fileID: 100100000, guid: 87e3c659f4af741429fad02839e0641d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
