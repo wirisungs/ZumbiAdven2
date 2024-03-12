@@ -20,8 +20,6 @@ public class MeleeEnemy : MonoBehaviour
 
     private EnemyPatrol enemyPatrol;
 
-    private bool isTakeDamage = false;
-
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -64,25 +62,16 @@ public class MeleeEnemy : MonoBehaviour
         return hit.collider != null;
     }
 
-
     private void OnDrawGizmos()
     {
-        if(isTakeDamage == true)
-        {
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-                new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
-            isTakeDamage = false;
-        }
-        
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
     }
 
     private void DamagePlayer()
     {
         if (PlayerInSight())
-        {
             playerLife.TakeDamage(damange);
-            isTakeDamage = true;
-        }    
     }
 }

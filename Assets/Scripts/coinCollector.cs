@@ -8,16 +8,13 @@ public class coinCollector : MonoBehaviour
 
     [SerializeField] private Text coinText;
 
-    private void Update()
-    {
-        coinText.text = "Coins: " + coins.ToString();
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Coin"))
         {
             Destroy(collision.gameObject);
             coins++;
+            coinText.text = "Coins: " + coins;
         }
     }
 

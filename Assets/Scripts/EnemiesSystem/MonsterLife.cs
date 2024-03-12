@@ -1,19 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MonsterLife : MonoBehaviour
 {
-    [Header("Game Object")]
-    [SerializeField] private GameObject player;
-
     [Header("Health")]
     [SerializeField] private float startingHealth;
-
     public float currentHealth { get; private set; }
     private Animator anim;
     private bool dead;
-
 
     [Header("iFrames")]
     [SerializeField] private float iFramesDuration;
@@ -57,10 +52,6 @@ public class MonsterLife : MonoBehaviour
                 }
 
                 dead = true;
-
-                // Khi enemy bị giết, tiền của người chơi sẽ nhận được tương ứng với số máu của enemy
-                coinCollector CoinCollector = player.GetComponent<coinCollector>();
-                CoinCollector.coins += startingHealth;
             }
 
         }
