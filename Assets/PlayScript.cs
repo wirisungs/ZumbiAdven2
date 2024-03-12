@@ -17,5 +17,8 @@ public class PlayScript : MonoBehaviour
             SceneManager.LoadSceneAsync("Level1");
         else Debug.Log("Login first, Please!");
     }
-    public bool CheckPlayerState() => tempData.GetState();
+    public bool CheckPlayerState()
+    {
+        return tempData.GetState();
+    }
 }

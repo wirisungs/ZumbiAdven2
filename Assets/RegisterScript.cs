@@ -5,11 +5,14 @@ using UnityEngine.UI;
 
 public class RegisterScript : MonoBehaviour
 {
-    [SerializeField]private InputField CfmPasswordInputField;
-    [SerializeField]private InputField UsernameInputField;
-    [SerializeField]private InputField PasswordInputField;
+    [SerializeField] private InputField CfmPasswordInputField;
+    [SerializeField] private InputField UsernameInputField;
+    [SerializeField] private InputField PasswordInputField;
+    [SerializeField] private GameObject RegisPanel;
     
     private List<PlayerTempData> playerTempDatas = new List<PlayerTempData>();
+
+    public List<PlayerTempData> GetPlayerTempDatas() { return playerTempDatas; }
 
     public void Register()
     {
@@ -27,9 +30,12 @@ public class RegisterScript : MonoBehaviour
                 PlayerTempData newUser = new PlayerTempData(Username, Password);
                 playerTempDatas.Add(newUser);
                 Debug.Log("Đăng ký thành công");
+
+                RegisPanel.SetActive(false);
             }
         }
-        Debug.Log("Không được để trống");
+        else
+            Debug.Log("Không được để trống");
     }
 
 }

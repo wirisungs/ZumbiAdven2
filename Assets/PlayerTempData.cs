@@ -8,10 +8,12 @@ public class PlayerTempData : MonoBehaviour
     private string Password = null;
     private bool State = false;
 
+    public string GetUsername() => Username;
     public void SetUsername(string Username)
     {
         this.Username = Username;
     }
+    public string GetPassword() => Password;    
     public void SetPassword(string Password)
     {
         this.Password = Password;
@@ -21,11 +23,10 @@ public class PlayerTempData : MonoBehaviour
     {
         this.State = State;
     }
-    public PlayerTempData(string username, string password, bool state = false)
+    public PlayerTempData(string username, string password)
     {
         Username = username;
         Password = password;
-        State = state;
     } 
     
 }
