@@ -69,6 +69,7 @@ public class DialogManager : MonoBehaviour
     }
     IEnumerator Typing(DialogueLine dialogue) // Triển khai Coroutine
     {
+
         dialogueText.text = "";
         foreach (char letter in dialogue.line.ToCharArray())
         {
