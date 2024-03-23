@@ -46,6 +46,10 @@ public class UpgradeManager : MonoBehaviour
     public GameObject MoveButton;
     public GameObject UpgradeButton;
 
+    [Header("Button")]
+    [SerializeField] private Button AtkUpgrader;
+    [SerializeField] private Button DefUpgrader;
+
 
     private void Start()
     {
@@ -97,6 +101,36 @@ public class UpgradeManager : MonoBehaviour
             AtkDamage.text = "Atk: MAX LEVEL";
             AtkPrice.text = "Price: MAX LEVEL";
         }
+
+        // ColorBox setup
+
+        if (CoinCollector.coins < DefPriceNum)
+        {
+
+            AtkUpgrader.GetComponent<Button>().colors = new ColorBlock
+            {
+                normalColor = new Color(157f / 255f, 157f / 255f, 157f / 255f, 255f / 255f),
+                highlightedColor = new Color(157f / 255f, 157f / 255f, 157f / 255f, 200f / 255f),
+                pressedColor = new Color(200f / 255f, 200f / 255f, 200f / 255f, 255f / 255f),
+                selectedColor = new Color(157f / 255f, 157f / 255f, 157f / 255f, 200f / 255f),
+                disabledColor = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f),
+                colorMultiplier = 1f,
+                fadeDuration = 0.1f
+            };
+        }
+        else if (CoinCollector.coins >= DefPriceNum)
+        {
+            AtkUpgrader.GetComponent<Button>().colors = new ColorBlock
+            {
+                normalColor = new Color(255f / 255f, 255f / 255f, 255f / 255f, 255f / 255f),
+                highlightedColor = new Color(245f / 245f, 245f / 255f, 245f / 255f, 200f / 255f),
+                pressedColor = new Color(200f / 255f, 200f / 255f, 200f / 255f, 255f / 255f),
+                selectedColor = new Color(245f / 245f, 245f / 255f, 245f / 255f, 200f / 255f),
+                disabledColor = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f),
+                colorMultiplier = 1f,
+                fadeDuration = 0.1f
+            };
+        }
     }
 
     public void UpgradeAttack()
@@ -114,7 +148,7 @@ public class UpgradeManager : MonoBehaviour
                 AtkLevelNum++; // Level++
             }
             else
-                Debug.Log("Not enough money");
+                Debug.Log("Not enough");
         }
         else
             Debug.Log("Đã đạt cấp độ tối đa");
@@ -132,6 +166,36 @@ public class UpgradeManager : MonoBehaviour
         {
             Def.text = "Def: MAX LEVEL";
             DefPrice.text = "Price: MAX LEVEL";
+        }
+
+        // ColorBox setup
+
+        if (CoinCollector.coins < DefPriceNum)
+        {
+
+            DefUpgrader.GetComponent<Button>().colors = new ColorBlock
+            {
+                normalColor = new Color(157f / 255f, 157f / 255f, 157f / 255f, 255f / 255f),
+                highlightedColor = new Color(157f / 255f, 157f / 255f, 157f / 255f, 200f / 255f),
+                pressedColor = new Color(200f / 255f, 200f / 255f, 200f / 255f, 255f / 255f),
+                selectedColor = new Color(157f / 255f, 157f / 255f, 157f / 255f, 200f / 255f),
+                disabledColor = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f),
+                colorMultiplier = 1f,
+                fadeDuration = 0.1f
+            };
+        }
+        else if (CoinCollector.coins >= DefPriceNum)
+        {
+            DefUpgrader.GetComponent<Button>().colors = new ColorBlock
+            {
+                normalColor = new Color(255f / 255f, 255f / 255f, 255f / 255f, 255f / 255f),
+                highlightedColor = new Color(245f / 245f, 245f / 255f, 245f / 255f, 200f / 255f),
+                pressedColor = new Color(200f / 255f, 200f / 255f, 200f / 255f, 255f / 255f),
+                selectedColor = new Color(245f / 245f, 245f / 255f, 245f / 255f, 200f / 255f),
+                disabledColor = new Color(200f / 255f, 200f / 255f, 200f / 255f, 128f / 255f),
+                colorMultiplier = 1f,
+                fadeDuration = 0.1f
+            };
         }
     }
 
@@ -151,7 +215,7 @@ public class UpgradeManager : MonoBehaviour
                 DefLevelNum++; // Level++
             }
             else
-                Debug.Log("Not enough money");
+                Debug.Log("Not enough");
         }
         else
             Debug.Log("Đã đạt cấp độ tối đa");

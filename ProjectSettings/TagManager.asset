@@ -8,6 +8,7 @@ TagManager:
   - Trap
   - Coin
   - Enemy
+  - DeadTrigger
   layers:
   - Default
   - TransparentFX
