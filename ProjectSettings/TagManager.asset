@@ -8,6 +8,7 @@ TagManager:
   - Trap
   - Coin
   - Enemy
+  - Checkpoint
   layers:
   - Default
   - TransparentFX

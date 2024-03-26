@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "936408517617",
+    "firebase_url": "https://zadb1-d088c-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "zadb1-d088c",
+    "storage_bucket": "zadb1-d088c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936408517617:android:6c267d8cfd820f240ed250",
+        "android_client_info": {
+          "package_name": "com.HUFLITCompany.ZAProject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5b1Sex1KyWZ5XezdjDc8lmxjDKGt03e4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

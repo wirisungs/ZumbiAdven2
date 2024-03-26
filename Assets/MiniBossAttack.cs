@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MiniBossAttack : MonoBehaviour
 {
-    public int attackDamage = 2;
+    public int attackDamage = 3;
 
     public Vector3 attackOffset;
     public float attackRange = 2f;

@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 3951424798553597957}
   - component: {fileID: 1588119494176613470}
   - component: {fileID: 263691761628030706}
+  - component: {fileID: 1944639551180779206}
+  - component: {fileID: 8220286635837469912}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -250,7 +252,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 325eacc09771045c597bcdb6a96a87f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coins: 0
   coinText: {fileID: 0}
+--- !u!114 &1944639551180779206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749597547024676900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e1c424811d134fd3a1f6cd07ecbbeac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointSound: {fileID: 8300000, guid: 1f3de74ea9ea54c5d9c9ba9277a9f06b, type: 3}
+--- !u!114 &8220286635837469912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749597547024676900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf0bce94c49ba4abe99d55bcffe8ec1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6122250992598891582
 GameObject:
   m_ObjectHideFlags: 0

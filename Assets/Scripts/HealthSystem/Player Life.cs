@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +9,7 @@ public class PlayerLife : MonoBehaviour
 {
     [Header ("Health")]
     [SerializeField] private float startingHealth;
+    public float numDeaths = 0f;
 
     public float getStartingHealth()
     {
@@ -91,9 +94,19 @@ public class PlayerLife : MonoBehaviour
         Physics2D.IgnoreLayerCollision(7, 8, false);
     }
 
-    private void RestartLevel()
+    public void Respawn()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        dead = false;
+        numDeaths++;
+        AddHealth(startingHealth);
+        anim.ResetTrigger("DeathTrigger");
+        anim.Play("player_idle");
+        StartCoroutine(Invulnerability());
+        foreach (Behaviour component in component)
+            component.enabled = true;
+        
     }
+
+    
 }
 
